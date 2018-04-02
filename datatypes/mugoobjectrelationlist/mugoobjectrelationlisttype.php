@@ -19,10 +19,10 @@ class MugoObjectRelationListType extends eZDataType
     /*!
      Initializes with a string id and a description.
     */
-    function MugoObjectRelationListType()
+    function __construct()
     {
         //eZDebug::writeDebug('MugoObjectRelationListType');
-        $this->eZDataType( self::DATA_TYPE_STRING, "Mugo object relations",
+        parent::__construct( self::DATA_TYPE_STRING, "Mugo object relations",
                     array(  'serialize_supported' => true,
                             'object_serialize_map' => array( 'data_text' => 'text' ) ) );
     }
